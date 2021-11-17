@@ -15,6 +15,7 @@ public class FieldOfView : MonoBehaviour
 
     private void Start()
     {
+        LevelController.Singeltone.OnLevelRestarted.AddListener(FindVisibleTargets);
         StartCoroutine(FindTargetsWithDelay(_scanDelay));
     }
 

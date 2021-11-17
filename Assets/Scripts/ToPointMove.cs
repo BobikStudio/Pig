@@ -26,7 +26,14 @@ public class ToPointMove : MonoBehaviour, IMove
 
     public void Move(Vector2 point)
     {
-        Vector2 direction = (point - (Vector2)transform.position).normalized;     
-        _rigidbody2D.velocity = direction * _movementSpeed;
+        if (Vector2.Distance(transform.position, point) > 0.1f)
+        {
+            Vector2 direction = (point - (Vector2)transform.position).normalized;
+            _rigidbody2D.velocity = direction * _movementSpeed;
+        }
+        else
+        {
+            _rigidbody2D.velocity = Vector2.zero;
+        }    
     }
 }

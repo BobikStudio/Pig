@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 808779441547516934}
   - component: {fileID: 808779441547516954}
   - component: {fileID: 8765317645646448644}
+  - component: {fileID: 5834144971081635127}
   m_Layer: 7
   m_Name: Dog
   m_TagString: Untagged
@@ -230,3 +231,15 @@ MonoBehaviour:
     StateSprite: {fileID: -6343356305408293647, guid: 0b24f3723ff6701429365132402f3e69, type: 3}
   - StateName: Patrol
     StateSprite: {fileID: 9118213209582376027, guid: 89056919b33f5e945981dd39544eba59, type: 3}
+--- !u!114 &5834144971081635127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808779441547516952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456bfe020b0dcd248a51d5bb96f8b478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

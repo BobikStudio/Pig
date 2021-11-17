@@ -25,14 +25,14 @@ public class SpriteController : MonoBehaviour
     {
         if (_flipToMoveDirection)
         {
-            if (_rigidbody2D.velocity.x < 0)
-            {
-                _spriteRenderer.flipX = false;
-            }
-            else
-            {
-                _spriteRenderer.flipX = true;
-            }
+           if (_rigidbody2D.velocity.x < 0)
+           {
+               _spriteRenderer.flipX = false;
+           }
+           else
+           {
+               _spriteRenderer.flipX = true;
+           }
         }
     }
 

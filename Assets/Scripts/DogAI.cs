@@ -25,14 +25,28 @@ public class DogAI : MonoBehaviour
         _fieldOfView = GetComponent<FieldOfView>();
         _spriteController = GetComponent<SpriteController>();
 
-        SetState(DogState.Patrol);
-        _movePoint = transform.position;
+        OnRestart();
+        LevelController.Singeltone.OnLevelRestarted.AddListener(OnRestart);
     }
 
     private void FixedUpdate()
     {
          StateControl();
         _movement.Move(_movePoint);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            GameManager.Singeltone.LoseGame();
+        }
+    }
+
+    private void OnRestart()
+    {
+        SetState(DogState.Patrol);
+        _movePoint = transform.position;
     }
 
     public void SetState(DogState state)
@@ -54,6 +68,13 @@ public class DogAI : MonoBehaviour
                 _movement.SetMovementSpeed(0.8f);
                 break;
         }
+    }
+
+    public void ExploseDog()
+    {
+        GameManager.Singeltone.Score += 1000;
+        SetState(DogState.Idle);
+        StartCoroutine(IdleWaitTime());
     }
 
     private void StateControl()
@@ -99,6 +120,12 @@ public class DogAI : MonoBehaviour
         }
 
         return movePoint;
+    }
+
+    private IEnumerator IdleWaitTime()
+    {
+        yield return new WaitForSeconds(3f);
+        SetState(DogState.Patrol);
     }
 
     public enum DogState
