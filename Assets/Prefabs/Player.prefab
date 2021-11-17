@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 8619569943652241269}
   - component: {fileID: 8619569943652241163}
   - component: {fileID: 8619569943652241162}
-  m_Layer: 0
+  - component: {fileID: 7101565361188749402}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +49,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.1
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -97,6 +98,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c34218f63bbe8b047bbe234c962c13f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7101565361188749402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619569943652241270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f48776d36c12754aa9b085005c11a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 8619569944367568314}
+  _flipToMoveDirection: 1
+  _stateList: []
 --- !u!1 &8619569944367568292
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8619569944367568293}
   - component: {fileID: 8619569944367568314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,9 +184,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -5792511334730316588, guid: b93471f8b17e5824297d138207c07595, type: 3}
+  m_Sprite: {fileID: 1382654831687872026, guid: b93471f8b17e5824297d138207c07595, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 6.87, y: 5.0299997}

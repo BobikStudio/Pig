@@ -19,6 +19,11 @@ public class ToPointMove : MonoBehaviour, IMove
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
+    public void SetMovementSpeed(float moveSpeed)
+    {
+        _movementSpeed = moveSpeed;
+    }
+
     public void Move(Vector2 point)
     {
         Vector2 direction = (point - (Vector2)transform.position).normalized;     
