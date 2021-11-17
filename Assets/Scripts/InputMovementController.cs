@@ -14,7 +14,14 @@ public class InputMovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 movePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        _movementType.Move(movePosition);
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 movePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            _movementType.Move(movePosition);
+        }
+        else
+        {
+            _movementType.Move(transform.position);
+        }
     }
 }
