@@ -19,6 +19,7 @@ public class FieldOfView : MonoBehaviour
         StartCoroutine(FindTargetsWithDelay(_scanDelay));
     }
 
+
     private void FindVisibleTargets()
     {
         VisibleTargets.Clear();

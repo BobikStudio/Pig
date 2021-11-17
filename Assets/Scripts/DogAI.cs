@@ -45,8 +45,8 @@ public class DogAI : MonoBehaviour
 
     private void OnRestart()
     {
-        SetState(DogState.Patrol);
         _movePoint = transform.position;
+        SetState(DogState.Patrol);
     }
 
     public void SetState(DogState state)
@@ -124,7 +124,7 @@ public class DogAI : MonoBehaviour
 
     private IEnumerator IdleWaitTime()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         SetState(DogState.Patrol);
     }
 

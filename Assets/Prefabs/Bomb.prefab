@@ -165,6 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1db3f4f4622dd9441a2d8625c5d5b8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _explosionTime: 3
-  _explosionRadius: 1
+  _explosionTime: 1
+  _explosionRadius: 2
   _spriteRenderer: {fileID: 4172584898373044872}
